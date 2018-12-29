@@ -21,7 +21,7 @@ podTemplate(label: label,
             container('sigma-agent') {
                 stage('Build a Angular project') {
                     sh 'npm install'
-                    sh 'ls ltr'
+                    sh 'ls -ltr'
                     sh 'ng build'
                 }
             }
