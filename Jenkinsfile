@@ -1,7 +1,7 @@
 def label = "mypod-${UUID.randomUUID().toString()}"
 podTemplate(label: label,
      containers: [
-        containerTemplate(name: 'sigma-agent', image: 'invent360/sigma-agent:1.0',ttyEnabled: true, command: 'cat'),
+        containerTemplate(name: 'sigma-agent', image: 'invent360/sigma-agent:latest',ttyEnabled: true, command: 'cat'),
      ],
      volumes: [
         hostPathVolume(hostPath: '/var/run/docker.sock', mountPath: '/var/run/docker.sock')
