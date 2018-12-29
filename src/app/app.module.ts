@@ -24,7 +24,7 @@ import { AppComponent } from './app.component';
     AccordionModule,
     PanelModule,
     ButtonModule,
-    RadioButtonModule,
+    //RadioButtonModule,
     AppRoutingModule
   ],
   providers: [],
