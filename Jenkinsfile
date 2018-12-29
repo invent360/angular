@@ -10,8 +10,8 @@ podTemplate(label: label,
 
         checkout scm
 
-        dir('pet-clinic-k8') {
-            git url: 'https://github.com/katson95/pet-clinic-k8.git'
+        dir('angular-app-k8') {
+            git url: 'https://github.com/katson95/angular-app-k8.git'
         }
 
         def IMAGE_NAME = 'invent360/ng-app'
@@ -21,7 +21,7 @@ podTemplate(label: label,
             container('sigma-agent') {
                 stage('Build a Angular project') {
                     sh 'npm install'
-                    sh 'ls ltr'
+                    sh 'ls -ltr'
                     sh 'ng build'
                 }
             }
