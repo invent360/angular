@@ -50,8 +50,8 @@ podTemplate(label: label,
         stage('Deploy To Dev') {
             container('sigma-agent'){
                 stage('Deploy To Dev') {
-                    sh 'kubectl create ns DEV'
-                    sh 'kubectl create -f ./angular-k8/ --namespace=DEV'
+                    sh 'kubectl create ns dev'
+                    sh 'kubectl create -f ./angular-k8/ --namespace=dev'
               }
             }
         }
